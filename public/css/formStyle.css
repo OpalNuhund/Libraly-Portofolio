@@ -1,0 +1,198 @@
+/* Reset and base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body, html {
+    height: 100%;
+    background: linear-gradient(10deg, #ffffff 0%, #c5dcff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    user-select: none;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Container */
+.auth-container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 14px;
+    box-shadow: 0 15px 40px rgba(0, 115, 204, 0.3);
+    width: 420px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Title */
+.auth-header {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #014a86;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.btn-back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #0288d1;
+    cursor: pointer;
+    font-weight: 700;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.137);
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.btn-back:hover {
+    background-color: #036eb0;
+}
+
+       /* Forms */
+label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #4f46e5;
+    margin-bottom: 5px;
+    align-self: flex-start;
+}
+input[type="email"],
+input[type="password"] {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1.5px solid #c7d2fe;
+    font-size: 1rem;
+    color: #374151;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+    width: 100%;
+}
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #4f46e5;
+    outline: none;
+    box-shadow: 0 0 8px #a5b4fc;
+}
+
+/* Submit button */
+.btn-submit {
+    background-color: #0288d1;
+    color: white;
+    border: none;
+    padding: 15px 0;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(79,70,229,0.4);
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+.btn-submit:hover {
+    background-color: #036eb0;
+}
+
+/* Alert */
+#alert-form {
+    text-align: center;
+    margin-top: 10px;
+    color: red;
+}
+
+/* Responsive Styles */
+@media (max-width: 576px) {
+    body, html {
+        padding: 15px;
+        align-items: flex-start;
+        background: #ffffff;
+    }
+
+    .auth-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 30px 20px;
+        margin-top: 30px;
+        box-shadow: 0 10px 25px rgba(0, 115, 204, 0.2);
+    }
+
+    .auth-header {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    .btn-back {
+        top: 15px;
+        left: 15px;
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        padding: 10px 12px;
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+    }
+
+    .btn-submit {
+        padding: 12px 0;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .auth-container {
+        padding: 25px 15px;
+    }
+
+    .auth-header {
+        font-size: 1.2rem;
+    }
+
+    label {
+        font-size: 0.9rem;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+
+    .btn-submit {
+        padding: 10px 0;
+        font-size: 0.9rem;
+    }
+}
+
+/* For very small devices */
+@media (max-width: 340px) {
+    .auth-container {
+        padding: 20px 12px;
+    }
+
+    .auth-header {
+        font-size: 1.1rem;
+    }
+
+    .btn-back {
+        top: 10px;
+        left: 10px;
+        padding: 5px 10px;
+    }
+}
